@@ -87,10 +87,14 @@ namespace TFIDFExample
                 "It's the first time WHO is calling for the elimination of something other than a noncommunicable disease.",
                 "Hockey moms united this Mother's Day for the mothers in Canada who lost their children in the Humboldt Broncos bus crash, sending them virtual hugs and bouquets.",
                 "Leaked audio from from one of Pastor John Hagee's sermons in the 1990s seemed to suggest that Adolf Hitler had been fulfilling God's will by aiding the desire of Jews to return to Israel, while Pastor Robert Jeffress has said that Mormons, Muslims and Hindus worship a false god.",
-                "Iran's Foreign minister will also meet with representatives from Germany, France and the United Kingdom to discuss the future of the nuclear deal, after Donald J. Trump announced that the US would be withdrawing from it."
+                "Iran's Foreign minister will also meet with representatives from Germany, France and the United Kingdom to discuss the future of the nuclear deal, after Donald J. Trump announced that the US would be withdrawing from it.",
+                "It's a historic step in the country's mission to build a navy capable of rivaling the world's leading maritime powers",
+                "The National Rifle Association says Governor Andrew Cuomo and a state agency have coerced banks and insurance companies to withhold services to the gun lobbying group",
+                "Today, the Trump administration will move the US embassy in Israel to Jerusalem"
             };
 
             // Apply TF*IDF to the documents and get the resulting vectors.
+            int length = documents.Length;
             double[][] inputs = TFIDF.Transform(documents, 0);//вывод частотных значений слов, которые встречаются хотя бы дважды
             double[][] inputs2 = TFIDF.Normalize(inputs);
             Dictionary<string, double> vocab = TFIDF._vocabularyIDF;
@@ -108,9 +112,12 @@ namespace TFIDFExample
                 Console.WriteLine("\n");
             }
             List<string> words = TFIDF.words;
-            foreach(var word in words)
+            double control_value = 0.6/(length / (Math.Sqrt(20*length*length)));
+            //Console.WriteLine("contol value" + control_value);
+            foreach (var word in words)
             {
-                Console.WriteLine(vocab[word] + " " + word);
+                if (vocab[word] < control_value)
+                    Console.WriteLine(vocab[word] + " " + word);
             }
             
             Console.WriteLine("Press any key ..");
