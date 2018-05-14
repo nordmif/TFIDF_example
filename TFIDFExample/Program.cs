@@ -67,7 +67,27 @@ namespace TFIDFExample
                 "Spring begins Tuesday, but winter isn't ready to retire just yet",
                 "Remember that huge back tattoo Ben Affleck said was fake? Apparently not so much.",
                 "A drone captured stunning cherry blossoms and other signs of spring in China",
-                "We're watching the opening bell as Facebook shares are down more than 4% after a data controversy that unfolded over the weekend."
+                "We're watching the opening bell as Facebook shares are down more than 4% after a data controversy that unfolded over the weekend.",
+                "Lolade Siyonbola, a black Yale University student, was napping in her dorm's common room when a white student called police. There needs to be punitive measures for people who act out of racially motivated bias,  Siyonbola told Good Morning America https://cnn.it/2GhfTeq",
+                "We’re live at the White House for the press briefing.",
+                "The Humbolt Broncos junior hockey team will be in the rink again in time for the fall season. The team lost 10 players, two coaches and a trainer in a devastating crash that killed 16 people.",
+                "I just don't know what goes on in that White House mentality for there not being an apology for that terrible remark",
+                "Howard Forever. In an inspiring commencement speech, Chadwick Boseman, the man behind the Black Panther mask, tells Howard University graduates that this is your time, ending with the movie's iconic salute. https://cnn.it/2IjiF8X",
+                "This 33-year-old writer and activist has mobilized tens of thousands of Ganzans in recent weeks",
+                "The Supreme Court struck down a 1992 federal law that prohibited most states from authorizing sports betting",
+                "The US officially relocated its Embassy to Jerusalem, formally upending decades of American foreign policy in a move that was met with clashes and protests along the Israeli-Gaza border.",
+                "The man behind the Black Panther mask gives a stirring graduation speech, ending with the iconic salute from the movie saying, Howard Forever",
+                "“By moving our embassy to Jerusalem, we have shown the world once again that the United States can be trusted... The United States stands with Israel because we believe — we know — that it is the right thing to do,” says White House senior adviser Jared Kushner at the US Embassy opening in Jerusalem https://cnn.it/2L0Gssf",
+                "We're watching the markets live as the Dow goes for its eighth straight day of gains — the longest winning streak for the index since November 2017 https://cnnmon.ie/2GcUovB",
+                "“Be fearless… Don’t just accept the world you inherit today. Don’t just accept the status quo. No big challenge has ever been solved… unless people dare to try something different”: Apple CEO Tim Cook shared this message of inspiration to Duke University graduates https://cnn.it/2L0Uzxp",
+                "We're live in Jerusalem, where the Trump administration is officially moving the US embassy in Israel from Tel Aviv, breaking with decades of established US policy and international practice. https://cnn.it/2IkRU02",
+                "The Israeli army air-dropped leaflets over Gaza warning people not to approach the fence that separates Gaza from Israel.",
+                "Border Patrol counted 5,984 deaths of people crossing illegally in the border region over a 16-year period. But a CNN investigation found at least 564 people who died but weren’t counted.",
+                "Is a nice stroll enough to confer the life-saving benefits we know come from exercise? We posed the question to five specialists in the field.",
+                "It's the first time WHO is calling for the elimination of something other than a noncommunicable disease.",
+                "Hockey moms united this Mother's Day for the mothers in Canada who lost their children in the Humboldt Broncos bus crash, sending them virtual hugs and bouquets.",
+                "Leaked audio from from one of Pastor John Hagee's sermons in the 1990s seemed to suggest that Adolf Hitler had been fulfilling God's will by aiding the desire of Jews to return to Israel, while Pastor Robert Jeffress has said that Mormons, Muslims and Hindus worship a false god.",
+                "Iran's Foreign minister will also meet with representatives from Germany, France and the United Kingdom to discuss the future of the nuclear deal, after Donald J. Trump announced that the US would be withdrawing from it."
             };
 
             // Apply TF*IDF to the documents and get the resulting vectors.
