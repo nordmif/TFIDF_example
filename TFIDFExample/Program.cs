@@ -112,8 +112,8 @@ namespace TFIDFExample
                 Console.WriteLine("\n");
             }
             List<string> words = TFIDF.words;
-            double control_value = 0.6/(length / (Math.Sqrt(20*length*length)));
-            //Console.WriteLine("contol value" + control_value);
+            double control_value = 0.6/(length / (Math.Sqrt(words.Count*length)));
+            Console.WriteLine("contol value" + control_value);
             foreach (var word in words)
             {
                 if (vocab[word] < control_value)
