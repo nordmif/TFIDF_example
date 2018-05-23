@@ -6,6 +6,15 @@ using System.Threading.Tasks;
 
 namespace TFIDFExample
 {
+    //public class MyClassComparer : IComparer<string>
+    //{
+    //    public int Compare(string cl1, string cl2)
+    //    {
+    //        return cl1.MyField == cl2.MyField ?
+    //            (cl1.OtherField == cl2.OtherField ? 0 : (cl1.OtherField < cl2.OtherField ? -1 : 1)) :
+    //            (cl1.MyField < cl2.MyField ? -1 : 1);
+    //    }
+    //}
     class Program
     {
         static void Main(string[] args)
@@ -113,11 +122,15 @@ namespace TFIDFExample
             }
             List<string> words = TFIDF.words;
             double control_value = 0.6/(length / (Math.Sqrt(words.Count*length)));
-            Console.WriteLine("contol value" + control_value);
+            //Console.WriteLine("contol value" + control_value);
+
+            //words.Sort();
+            var sortedElements = vocab.OrderBy(kvp => kvp.Value);
+            //Dictionary<string, double> vocab2 = sortedElements;
             foreach (var word in words)
             {
                 if (vocab[word] < control_value)
-                    Console.WriteLine(vocab[word] + " " + word);
+                    Console.WriteLine(Math.Round(1/vocab[word],3) + " " + word);
             }
             
             Console.WriteLine("Press any key ..");

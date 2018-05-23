@@ -43,6 +43,15 @@ namespace TFIDFExample
         /// </summary>
         public static Dictionary<string, double> _vocabularyIDF = new Dictionary<string, double>();//словарь всех слов и их частот
         public static List<string> words;
+
+        internal static Program Program
+        {
+            get => default(Program);
+            set
+            {
+            }
+        }
+
         /// <summary>
         /// Transforms a list of documents into their associated TF*IDF values.
         /// If a vocabulary does not yet exist, one will be created, based upon the documents' words.
