@@ -123,14 +123,25 @@ namespace TFIDFExample
             List<string> words = TFIDF.words;
             double control_value = 0.6/(length / (Math.Sqrt(words.Count*length)));
             //Console.WriteLine("contol value" + control_value);
-
+            //List<double> zlk = new List<double>(vocab.Values);
+            //zlk.Sort();
+            //List<String> vocab2 = new List<String>();
+            //foreach (var item in zlk)
+            //{               
+            //    vocab2.Add(vocab[item]);
+            //}
+            var myList = vocab.ToList();
+            myList.Sort((pair1, pair2) => pair1.Value.CompareTo(pair2.Value));
+            Dictionary<string, double> vocab3 = myList.ToDictionary(x => x.Key, x => x.Value);
             //words.Sort();
-            var sortedElements = vocab.OrderBy(kvp => kvp.Value);
+            //var sortedElements = vocab.OrderBy(kvp => kvp.Value);
             //Dictionary<string, double> vocab2 = sortedElements;
-            foreach (var word in words)
+            int k = 0;
+            foreach (var word in vocab3.Keys)
             {
-                if (vocab[word] < control_value)
-                    Console.WriteLine(Math.Round(1/vocab[word],3) + " " + word);
+                if (k < words.Count/10)
+                    Console.WriteLine(Math.Round(1/vocab3[word],3) + " " + word);
+                k++;
             }
             
             Console.WriteLine("Press any key ..");
